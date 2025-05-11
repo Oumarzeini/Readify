@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+    <link rel="icon" href="{{url_for ('static', filename= 'images/data_icon.png')}}">
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/books.css')}}">
+</head>
+<body>
+
+    <header>
+        <div class="app-logo-container"><img class="app-logo" src="{{url_for ('static', filename='images/applogo.jpg')}}" alt="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="min-height:100vh ;display: flex; flex-flow: column nowrap;gap: 30px; justify-content: center; align-items: center;">
+
+        <h1 style="color: var(--BODY-COLOR);">Books per Section :</h1>
+        <img src="/static/chart.png" alt="section chart" height="600" width="80%" style="border-radius: 10px;">
+    </section>
+
+    <section style="min-height:100vh ;display: flex; flex-flow: column nowrap;gap: 30px; justify-content: center; align-items: center;">
+
+        <h1 style="color: var(--BODY-COLOR);">Top 10 authors</h1>
+
+        <img src="/static/pie.png" alt="section chart" height="500" width="90%" style="border-radius: 10px;">
+    </section>
+
+    
+</body>
+</html>

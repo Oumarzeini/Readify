@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dokdo&family=Eater&family=Emblema+One&family=Ephesis&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Katibeh&family=Lobster&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&family=Yuji+Mai&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root {
+    --BODY-BGC : #294328;
+    --BODY-COLOR: #e2f87b;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 2rem;
+    background-color: var(--BODY-BGC);
+    color: var(--BODY-COLOR);
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    gap : 100px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border: 2px double white;
+    border-radius: 50%;
+}
+
+.uit {
+    margin-right: 20px;
+    background-color: white;
+}
+
+.prof {
+    margin-top: 20px;
+    color: var(--BODY-COLOR);
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+.logo-container {
+    margin-left: 5rem;
+}
+.logo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.main {
+    display: flex;
+    flex-flow: row;
+    gap: 300px;
+}
+
+.svg {
+    margin-top: 3rem;
+    height: 300px;
+    width: 300px;
+    border: none;
+}
+
+h3 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family: system-ui;
+    font-size: 2rem;
+    text-align: center;
+}
+.logos {
+    gap: 20px;
+}
+
+.main{
+    margin-top: 20px;
+}
+
+h1{
+    font-family: system-ui;
+    font-size: clamp(2rem, 5rem, 6rem);
+    margin-bottom: 2rem;
+}
+
+h4{
+    font-family: system-ui;
+    font-size: clamp(1rem, 2rem, 4rem);
+    margin-left: 4rem;
+    opacity: 50%;
+}
+
+.opacity {
+    opacity: 50%;
+    font-family: "Ephesis", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button{
+    height: 100px;
+    width: 250px;
+    background-color: var(--BODY-COLOR);
+    border-radius: 20px;
+    position: absolute;
+    right: 60px;
+    bottom: 80px;
+    border:none;
+}
+
+button:active{
+    box-shadow: 0 6x black;
+    transform: scale(0.9);
+}
+button:hover{
+    box-shadow: 0 0 6px white;
+}
+
+button {
+    text-decoration: none;
+    font-family: system-ui;
+    font-size: 3vw;
+    font-weight: 600;
+    color: var(--BODY-BGC);
+}
+
+footer {
+    min-height: 50vh;
+    position: relative;
+}

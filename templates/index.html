@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}">
+    <link rel="icon" href="{{url_for ('static', filename='images/applogo.jpg')}}">
+</head>
+<body>
+
+    <header>
+        <section class="title">
+    <h1>
+        Welcome to Readify
+    </h1>
+    <h4>A library in your pocket <br>Enjoy the features every reader deserves <br> <span class="opacity">-made by readers for readers-</span> </h4>
+
+</section>
+
+    <section class="logos">
+
+        <img class="svg" src="/static/images/readingSvg.svg" alt="reading svg">
+
+</section>
+
+</header>
+
+    <section class="main">
+    <div class="logo-container">
+        <img src="{{url_for ('static', filename='images/applogo.jpg')}}" class="logo" alt="logo">
+    </div>
+
+
+    <button onclick="window.location.href='/books'">Continue</a></button>
+    
+
+
+</section>
+
+<footer>
+
+</footer>
+
+    
+</body>
+</html>

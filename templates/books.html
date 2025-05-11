@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='css/books.css')}}">
+    <link rel="icon" href="{{url_for ('static', filename='images/applogo.jpg')}}">
+    <script defer src="{{url_for ('static', filename='js/main.js')}}"></script>
+</head>
+<body>
+
+    <header>
+        <div class="app-logo-container"><img class="app-logo" src="{{url_for ('static', filename='images/applogo.jpg')}}" alt="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/data">Data Visualisation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Search your books or just scroll and explore!</h1>
+
+        <form method="get" action="/books">
+        <div class="search-container">
+            <input name="search" id="search-input" type="search" height="20" width="20" placeholder="search books...">
+
+            <!-- <select name="section" id="section-filter">
+                <option  value="" >All</option>
+                <option id="programming" value="programming">programming</option>
+                <option id="science" value="science">Science</option>
+                <option id="literature" value="literature">Literature</option>
+                <option id="fiction" value="fiction">Fiction</option>
+                <option id="history" value="history">History</option>
+            </select> -->
+
+            <button class="search-btn" type="submit">Search</button>
+
+        </div>
+    </form>
+        
+            <div class="table"> 
+                <!-- Header -->
+               <div class="header-section">
+
+                <div class="header">Title</div>
+                <div class="header">Author</div>
+                <div class="header">Section</div>
+                <div class="header">Description</div>
+                <div class="header"><span class="nowrap">Download Link</span></div>
+                
+               </div>
+
+               <div class="rows-section">
+                {% for book in books %}
+                  <div class="rows title rows-title" onclick="openPopup('{{ book[0] }}', '{{ book[1] }}', '{{ book[2] }}', '{{ book[3] }}', '{{ book[4] }}')">
+                      {{ book[0] }}  <!-- book[0] = Title -->
+                  </div>
+                  <div class="rows">{{ book[1] }}</div> <!-- Author -->
+                  <div class="rows">{{ book[2] }}</div> <!-- Section -->
+                  <div class="rows description">{{ book[3] }}</div> <!-- Description -->
+                  <div class="rows"><a href="{{ book[4] }}">Download</a></div> <!-- Link -->
+                {% endfor %}
+              </div>
+              
+            </div>
+    </main>
+
+    <article>
+      <div class="popup-overlay" id="popup-overlay"></div>
+      <div class="popup" id="popup">
+      <h2 id="popup-title">- </h2>
+      <p><strong>Author : </strong> <span id="popup-author"></span></p>
+      <p><strong>Section : </strong> <span id="popup-section"></span></p>
+      <p><strong>Description : </strong> <span id="popup-description"></span></p>
+      <p> <a id="popup-link" href="#">Download book</a></p>
+      <button class="popup-btn" onclick="closePopup()">Close</button>
+    </div>
+    </article>
+
+    <footer>
+        <p class="back-top show">
+            <a href="#">back to top ↑</a>
+        </p>
+    </footer>
+    
+</body>
+</html>
